@@ -211,18 +211,18 @@
     renderSection("snack",products.snack);
   </script>
 
-  <!-- 月亮 + 兔子 -->
-  <svg width="120" height="120" viewBox="0 0 120 120"
-       style="position:fixed;right:18px;top:84px;opacity:.85;z-index:0;pointer-events:none">
-    <defs>
-      <radialGradient id="gMoon" cx="50%" cy="50%" r="60%">
-        <stop offset="0%" stop-color="#fff6c9"/>
-        <stop offset="70%" stop-color="#ffd87a"/>
-        <stop offset="100%" stop-color="#f7c24f"/>
-      </radialGradient>
-    </defs>
-    <circle cx="60" cy="60" r="54" fill="url(#gMoon)"/>
-  </svg>
+  <!-- 🌕 固定在右上角的小月亮 -->
+<svg width="80" height="80" viewBox="0 0 120 120"
+     style="position:fixed;right:20px;top:20px;opacity:.9;z-index:9999;pointer-events:none">
+  <defs>
+    <radialGradient id="gMoon" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#fff6cc"/>
+      <stop offset="70%" stop-color="#ffdf8a"/>
+      <stop offset="100%" stop-color="#ffbc24"/>
+    </radialGradient>
+  </defs>
+  <circle cx="60" cy="60" r="54" fill="url(#gMoon)"/>
+</svg>
   <svg width="120" height="120" viewBox="0 0 120 120"
        style="position:fixed;left:14px;bottom:24px;opacity:.85;z-index:0;pointer-events:none">
     <path fill="#fff"
