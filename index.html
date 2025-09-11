@@ -44,7 +44,11 @@
     .desc{margin:0 0 12px;font-size:14px;color:#555;line-height:1.6;}
     .desc b{color:#c35400;font-weight:800;background:linear-gradient(#fff2,#fff2),linear-gradient(transparent 65%,#ffe6b6 0);background-clip:padding-box,content-box;}
 
-    /* ── 彈出警語樣式 ───────────────────────── */
+    /* ── CTA 按鈕風格 ── */
+    .desc a.cta{display:inline-block;margin-top:10px;padding:10px 18px;font-size:16px;font-weight:800;color:#fff;background:var(--brand);border-radius:8px;text-decoration:none;transition:.2s}
+    .desc a.cta:hover{background:#064c2f}
+
+    /* ── 彈出警語樣式 ── */
     .modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.55);
       display:flex;align-items:center;justify-content:center;z-index:9999;
       visibility:hidden;opacity:0;transition:.28s}
@@ -83,6 +87,9 @@
   <footer><div>© 2025 桃捷員工專屬團購檔</div></footer>
 
   <script>
+    const BEANS_URL = "https://www.starbucks.com.tw/coffee/our-coffees.jspx?cat=bean";
+    const VIA_URL = "https://www.starbucks.com.tw/products/index.jspx?cat=via";
+
     const products = {
       moon: [
         { name:"月光寶盒", price:2280, img:"major_01.png", desc:"紫色布面搭配木紋盒面與金色鎖扣。<br><b>黑松露奶皇、棗泥核桃、蜂蜜柚香琴酒奶皇、草莓乳酪奶皇月餅＋西點</b>" },
@@ -91,13 +98,13 @@
         { name:"月光樂園", price:550, img:"major_06.png", desc:"<b>蘋果鳳梨酥 4 入、可可鳳梨酥 4 入</b>" }
       ],
       coffee: [
-        { name:"VIA 分享禮盒", price:980, img:"coffee_05@2x.png", desc:"<b>任選三盒 VIA 咖啡（12 入）</b>，含哥倫比亞、星巴克經典、派克市場、義大利烘焙等。", preDiscount:100 },
+        { name:"VIA 分享禮盒", price:980, img:"coffee_05@2x.png", desc:`<b>任選三盒 VIA 咖啡（12 入）</b>，含哥倫比亞、星巴克經典、派克市場、義大利烘焙等。<br><a class="cta" href="${VIA_URL}" target="_blank">查看 VIA 系列（官方）</a>`, preDiscount:100 },
         { name:"掛耳咖啡禮盒", price:660, img:"coffee_06@2x.png", desc:"<b>任選三盒掛耳咖啡（6 入）即折 60 元</b>，風味多選，沖泡便利。", preDiscount:60 },
-        { name:"星巴克居家咖啡禮盒", price:1050, img:"coffee_01@2x.png", desc:"<b>結合掛耳、VIA 即溶咖啡多種風味</b>，內含 27 條多樣組合。" }
+        { name:"星巴克居家咖啡禮盒", price:1050, img:"coffee_01@2x.png", desc:`<b>結合掛耳、VIA 即溶咖啡多種風味</b>，內含 27 條多樣組合。<br><a class="cta" href="${VIA_URL}" target="_blank">查看 VIA 系列（官方）</a>` }
       ],
       beans: [
-        { name:"咖啡雙星禮盒（自選兩包）", price:640, img:"coffee_07@2x.png", desc:"<b>任選 2 包咖啡豆（典藏除外）</b>。原價先折 30 再享 8 折。", preDiscount:30 },
-        { name:"季節咖啡雙星禮盒（自選兩包）", price:930, img:"coffee_11@2x.png", desc:"<b>任選 2 包季節咖啡豆</b>。原價先折 100 再享 8 折。", preDiscount:100 }
+        { name:"咖啡雙星禮盒（自選兩包）", price:640, img:"coffee_07@2x.png", desc:`<b>任選 2 包咖啡豆（典藏除外）</b>。原價先折 30 再享 8 折。<br><a class="cta" href="${BEANS_URL}" target="_blank">查看咖啡豆官方口味</a>`, preDiscount:30 },
+        { name:"季節咖啡雙星禮盒（自選兩包）", price:930, img:"coffee_11@2x.png", desc:`<b>任選 2 包季節咖啡豆</b>。原價先折 100 再享 8 折。<br><a class="cta" href="${BEANS_URL}" target="_blank">查看咖啡豆官方口味</a>`, preDiscount:100 }
       ],
       snack: [
         { name:"精選咖啡蛋捲禮盒", price:580, img:"minor_01@2x.png", desc:"<b>咖啡蛋捲 6 包（每包 9 支）</b>，酥脆香濃。" },
